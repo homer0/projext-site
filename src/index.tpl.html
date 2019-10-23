@@ -16,30 +16,39 @@
                 <a
                   href="#wtf"
                   class="nav-link -selected"
+                  title="WTF is this?"
                 >WTF?</a>
               </li>
               <li>
                 <a
                   href="#engines-and-frameworks"
                   class="nav-link"
+                  title="Engines & Frameworks"
                 >Engines & Frameworks</a>
               </li>
               <li>
                 <a
                   href="#features"
                   class="nav-link"
+                  title="Features"
                 >Features</a>
               </li>
               <li>
                 <a
-                  href="#docs"
+                  href="http://homer0.github.io/projext"
                   class="nav-link"
+                  title="Docs"
+                  target="_blank"
+                  rel="noreferrer"
                 >Docs</a>
               </li>
             </ul>
             <a
               href="https://github.com/homer0/projext"
               class="github"
+              title="Go to the Github repository"
+              target="_blank"
+              rel="noreferrer"
             >
               <img
                 src="<%= require('assets/images/icons/github.svg') %>"
@@ -110,7 +119,7 @@
                 </div>
 
                 <p>
-                  Besides abstracting the configurations, projext can also take care of "frameworks recipes", for example: for a React application, you know you need <a href="#"><code>@babel/preset-react</code></a> and configure the hot loader on webpack... well, there's a plugin that uses projext API to do all that without you having to do anything.
+                  Besides abstracting the configurations, projext can also take care of "frameworks recipes", for example: for a React application, you know you need <a href="https://yarnpkg.com/en/package/@babel/preset-react" title="See @babel/preset-react page on Yarn" target="_blank" rel="noreferrer"><code>@babel/preset-react</code></a> and configure the hot loader on webpack... well, there's a plugin that uses projext API to do all that without you having to do anything.
                 </p>
                 <p>
                   Now, projext packages are organized in 4 different layers:
@@ -123,15 +132,15 @@
                   </li>
                   <li>
                     <i>2</i>
-                    <p><strong>Build engines:</strong> These are the plugins that use the configurations for specific build engines, like <a href="#"><code>projext-plugin-webpack</code></a> for webpack.</p>
+                    <p><strong>Build engines:</strong> These are the plugins that use the configurations for specific build engines, like <a href="https://yarnpkg.com/en/package/projext-plugin-webpack" title="See projext-plugin-webpack page on Yarn" target="_blank" rel="noreferrer"><code>projext-plugin-webpack</code></a> for webpack.</p>
                   </li>
                   <li>
                     <i>3</i>
-                    <p><strong>Frameworks:</strong> These are the recipes for specific build engines, like <a href="#"><code>projext-plugin-webpack-aurelia</code></a> for Aurelia with webpack.</p>
+                    <p><strong>Frameworks:</strong> These are the recipes for specific build engines, like <a href="https://yarnpkg.com/en/package/projext-plugin-webpack-aurelia" title="See projext-plugin-webpack-aurelia page on Yarn" target="_blank" rel="noreferrer"><code>projext-plugin-webpack-aurelia</code></a> for Aurelia with webpack.</p>
                   </li>
                   <li>
                     <i>4</i>
-                    <p><strong>Plugins:</strong> Extra functionality, like <a href="#"><code>projex-plugin-runner</code></a> to run Node projects on production.</p>
+                    <p><strong>Plugins:</strong> Extra functionality, like <a href="https://yarnpkg.com/en/package/projext-plugin-runner" title="See projext-plugin-runner page on Yarn" target="_blank" rel="noreferrer"><code>projex-plugin-runner</code></a> to run Node projects on production.</p>
                   </li>
                 </ul>
               </article>
@@ -151,7 +160,14 @@
                         alt="webpack logo"
                       />
                       <p>
-                        <strong><a href="#">webpack</a></strong>
+                        <strong>
+                          <a
+                            href="https://yarnpkg.com/en/package/projext-plugin-webpack"
+                            title="See projext-plugin-webpack page on Yarn"
+                            target="_blank"
+                            rel="noreferrer"
+                          >webpack</a>
+                        </strong>
                       </p>
                     </li>
                     <li>
@@ -160,7 +176,13 @@
                         alt="Rollup logo"
                       />
                       <p>
-                        <strong><a href="#">Rollup</a></strong>
+                        <strong>
+                          <a
+                            href="https://yarnpkg.com/en/package/projext-plugin-rollup"
+                            title="See projext-plugin-rollup page on Yarn"
+                            target="_blank"
+                            rel="noreferrer"
+                          >Rollup</a></strong>
                       </p>
                     </li>
                     <li>
@@ -169,8 +191,8 @@
                         alt="React logo"
                       />
                       <p>
-                        <strong><a href="#">React</a></strong>
-                        <span><a href="#">webpack</a> - <a href="#">Rollup</a></span>
+                        <strong>React</strong>
+                        <span><a href="https://yarnpkg.com/en/package/projext-plugin-webpack-react" title="See projext-plugin-webpack-react page on Yarn" target="_blank" rel="noreferrer">webpack</a> - <a href="https://yarnpkg.com/en/package/projext-plugin-rollup-react" title="See projext-plugin-rollup-react page on Yarn" target="_blank" rel="noreferrer">Rollup</a></span>
                       </p>
                     </li>
                     <li>
@@ -179,8 +201,8 @@
                         alt="AngularJS logo"
                       />
                       <p>
-                        <strong><a href="#">AngularJS</a></strong>
-                        <span><a href="#">webpack</a> - <a href="#">Rollup</a></span>
+                        <strong>AngularJS</strong>
+                        <span><a href="https://yarnpkg.com/en/package/projext-plugin-webpack-angularjs" title="See projext-plugin-webpack-angularjs page on Yarn" target="_blank" rel="noreferrer">webpack</a> - <a href="https://yarnpkg.com/en/package/projext-plugin-rollup-angularjs" title="See projext-plugin-rollup-angularjs page on Yarn" target="_blank" rel="noreferrer">Rollup</a></span>
                       </p>
                     </li>
                     <li>
@@ -189,8 +211,8 @@
                         alt="Aurelia logo"
                       />
                       <p>
-                        <strong><a href="#">Aurelia</a></strong>
-                        <span><a href="#">webpack</a></span>
+                        <strong>Aurelia</strong>
+                        <span><a href="https://yarnpkg.com/en/package/projext-plugin-webpack-aurelia" title="See projext-plugin-webpack-aurelia page on Yarn" target="_blank" rel="noreferrer">webpack</a></span>
                       </p>
                     </li>
                     <li>
@@ -199,7 +221,7 @@
                         alt="Vue.js logo"
                       />
                       <p>
-                        <strong><a href="#">Vue.js</a></strong>
+                        <strong>Vue.js</strong>
                         <span class="disabled">Coming soon!</span>
                       </p>
                     </li>
@@ -224,7 +246,7 @@
                       />
                       <p>
                         <span>
-                          <strong><a href="#">Babel</a></strong> with the env preset
+                          <strong><a href="https://babeljs.io" title="Go to Babel site" target="_blank" rel="noreferrer">Babel</a></strong> with the env preset
                         </span>
                       </p>
                     </li>
@@ -235,7 +257,7 @@
                       />
                       <p>
                         <span>
-                          <strong><a href="#">Flow</a></strong> support via Babel
+                          <strong><a href="https://flow.org" title="Go to Flow's site" target="_blank" rel="noreferrer">Flow</a></strong> support via Babel
                         </span>
                       </p>
                     </li>
@@ -246,7 +268,7 @@
                       />
                       <p>
                         <span>
-                          <strong><a href="#">TypeScript</a></strong> support via Babel
+                          <strong><a href="https://www.typescriptlang.org/" title="Go to TypeScript's site" target="_blank" rel="noreferrer">TypeScript</a></strong> support via Babel
                         </span>
                       </p>
                     </li>
@@ -257,7 +279,7 @@
                       />
                       <p>
                         <span>
-                          <strong><a href="#">NodeJS</a></strong> targets
+                          <strong><a href="https://nodejs.org" title="Go to Node's site" target="_blank" rel="noreferrer">NodeJS</a></strong> targets
                         </span>
                       </p>
                     </li>
@@ -268,7 +290,7 @@
                       />
                       <p>
                         <span>
-                          <strong><a href="#">SCSS</a></strong> support
+                          <strong><a href="https://sass-lang.com" title="Go to SASS' site" target="_blank" rel="noreferrer">SCSS</a></strong> support
                         </span>
                       </p>
                     </li>
@@ -279,7 +301,7 @@
                       />
                       <p>
                         <span>
-                          <strong><a href="#">Nodemon</a></strong> integration
+                          <strong><a href="https://nodemon.io" title="Go to Nodemon's site" target="_blank" rel="noreferrer">Nodemon</a></strong> integration
                         </span>
                       </p>
                     </li>
@@ -298,7 +320,7 @@
                       This is the documentation generated from the code, there’s no better place to understand the magic
                     </p>
                     <div>
-                      <a href="#">Go to the <strong>Docs</strong></a>
+                      <a href="http://homer0.github.io/projext" title="Go to the docs" target="_blank" rel="noreferrer">Go to the <strong>Docs</strong></a>
                     </div>
                   </li>
                   <li>
@@ -306,7 +328,7 @@
                       There’s a sample project or target for almost every feature, what are you waiting for?
                     </p>
                     <div>
-                      <a href="#">Go to the <strong>Samples</strong> repo</a>
+                      <a href="https://github.com/homer0/projext-samples" title="Go to the samples repository" target="_blank" rel="noreferrer">Go to the <strong>Samples</strong> repo</a>
                     </div>
                   </li>
 
@@ -315,7 +337,13 @@
             </div>
             <footer class="footer">
               <div>
-                <a href="#" class="homer0">
+                <a
+                  href="https://homer0.com"
+                  class="homer0"
+                  title="Go to homer0.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img
                     src="<%= require('assets/images/homer0.svg') %>"
                     alt="homer0 logo"
@@ -325,18 +353,42 @@
               <div>
                 <ul class="shields">
                   <li>
-                    <a href="https://travis-ci.org/homer0/projext">
-                      <img src="https://img.shields.io/travis/homer0/projext.svg?style=flat-square" alt="Travis shield" />
+                    <a
+                      href="https://travis-ci.org/homer0/projext"
+                      title="See the builds"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src="https://img.shields.io/travis/homer0/projext.svg?style=flat-square"
+                        alt="Travis shield"
+                      />
                     </a>
                   </li>
                   <li>
-                    <a href="https://coveralls.io/github/homer0/projext?branch=master">
-                      <img src="https://img.shields.io/coveralls/github/homer0/projext.svg?style=flat-square" alt="Coveralls shield" />
+                    <a
+                      href="https://coveralls.io/github/homer0/projext?branch=master"
+                      title="See the code coverage"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src="https://img.shields.io/coveralls/github/homer0/projext.svg?style=flat-square"
+                        alt="Coveralls shield"
+                      />
                     </a>
                   </li>
                   <li>
-                    <a href="https://david-dm.org/homer0/projext">
-                      <img src="https://img.shields.io/david/homer0/projext.svg?style=flat-square" alt="David shield" />
+                    <a
+                      href="https://david-dm.org/homer0/projext"
+                      title="See the dependencies status"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src="https://img.shields.io/david/homer0/projext.svg?style=flat-square"
+                        alt="David shield"
+                      />
                     </a>
                   </li>
                 </ul>

@@ -1,10 +1,11 @@
 $main-text-color: #1D1F24;
+$disabled-text: #595959;
 $max-width: 872px;
 $header-height: 50px;
-$header-background-color: rgba(0, 0, 0, 0.5);
+$header-background-color: #0E0F11;
 $header-links-color: #D5DAE2;
 $header-links-selected-color: #A3BE8C;
-$header-links-selected-background-color: rgba(255, 255, 255, 0.06);
+$header-links-selected-background-color: #1D1F23;
 $content-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
 $content-border-radius: 2px;
 $content-background-color: #FFFFFF;
@@ -41,6 +42,7 @@ $externals-focused-border-color: $main-text-color;
   flex-direction: row;
   align-items: center;
 }
+
 body {
   background-color: $main-text-color;
   background-image: url(../images/background.png);
@@ -56,10 +58,17 @@ a {
   height: 100%;
 }
 
+.main {
+  position: relative;
+}
+
 .header {
   @extend %center-row;
   height: $header-height;
+  width: 100%;
   background-color: $header-background-color;
+  position: fixed;
+  z-index: 2;
 }
 
 .nav {
@@ -113,6 +122,7 @@ a {
 
 .sub-header {
   @extend %center-row-horizontal;
+  padding-top: $header-height;
 }
 
 .logo-container {
@@ -341,7 +351,7 @@ a {
   span {
     font-size: 13px;
     &.disabled {
-      color: #929292;
+      color: $disabled-text;
     }
   }
   a {
