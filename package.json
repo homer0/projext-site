@@ -14,6 +14,7 @@
     "projext-plugin-webpack": "^9.2.0",
     "eslint": "^6.5.1",
     "eslint-plugin-homer0": "^2.0.1",
+    "husky": "^3.0.9",
     "leasot": "^8.3.0"
   },
   "engine-strict": true,
