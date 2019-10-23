@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>projext | Bundling made simple</title>
+  </head>
+  <body>
+    <main class="main">
+      <header class="header">
+        <div class="container">
+          <nav class="nav">
+            <ul class="nav-links">
+              <li>
+                <a
+                  href="#wtf"
+                  class="nav-link -selected"
+                >WTF?</a>
+              </li>
+              <li>
+                <a
+                  href="#engines-and-frameworks"
+                  class="nav-link"
+                >Engines & Frameworks</a>
+              </li>
+              <li>
+                <a
+                  href="#features"
+                  class="nav-link"
+                >Features</a>
+              </li>
+              <li>
+                <a
+                  href="#docs"
+                  class="nav-link"
+                >Docs</a>
+              </li>
+            </ul>
+            <a
+              href="https://github.com/homer0/projext"
+              class="github"
+            >
+              <img
+                src="<%= require('assets/images/icons/github.svg') %>"
+                alt="Github logo"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <div class="sub-header">
+        <div class="container logo-container">
+          <h1 class="logo">projext | Bundling made simple</h1>
+        </div>
+      </div>
+      <section class="section">
+        <div class="container">
+          <div class="content">
+            <div class="content_body">
+
+              <div class="installBox-container">
+                <div class="installBox">
+                  <button
+                    type="button"
+                    class="installBox_toggle"
+                  >
+                    <img
+                      src="<%= require('assets/images/icons/yarn.svg') %>"
+                      alt="Yarn logo"
+                      class="installBox_icon -yarn"
+                    />
+                    <img
+                      src="<%= require('assets/images/icons/npm.svg') %>"
+                      alt="npm logo"
+                      class="installBox_icon -npm"
+                    />
+                  </button>
+                  <button
+                    type="button"
+                    class="installBox_copy"
+                  >
+                    <code class="installBox_code">
+                      > npm init projext
+                    </code>
+                  </button>
+                </div>
+              </div>
+
+              <article class="article">
+                <h2 class="article_title">
+                  <strong>WTF</strong> is this?
+                </h2>
+
+                <p>
+                  This tool uses webpack and Rollup under the hood in order to bundle your project. The advantage here is that projext is way easier to configure and it does all it can to try and understand your project, so you don't have to write any configuration at all.
+                </p>
+
+                <div class="warning">
+                  <div class="warning_iconContainer">
+                    <img
+                      src="<%= require('assets/images/icons/warning.svg') %>"
+                      alt="warning icon"
+                      class="warning_icon"
+                    />
+                  </div>
+                  <p>
+                    <strong>projext doesn't aim to replace webpack nor Rollup</strong>, it's just an easier way to use them for simple projects.
+                  </p>
+                </div>
+
+                <p>
+                  Besides abstracting the configurations, projext can also take care of "frameworks recipes", for example: for a React application, you know you need <a href="#"><code>@babel/preset-react</code></a> and configure the hot loader on webpack... well, there's a plugin that uses projext API to do all that without you having to do anything.
+                </p>
+                <p>
+                  Now, projext packages are organized in 4 different layers:
+                </p>
+
+                <ul class="numberedList">
+                  <li>
+                    <i>1</i>
+                    <p><strong>Configurations/Core:</strong> This is the projext package, the one that defines your project's targets configurations for the build engines and Babel.</p>
+                  </li>
+                  <li>
+                    <i>2</i>
+                    <p><strong>Build engines:</strong> These are the plugins that use the configurations for specific build engines, like <a href="#"><code>projext-plugin-webpack</code></a> for webpack.</p>
+                  </li>
+                  <li>
+                    <i>3</i>
+                    <p><strong>Frameworks:</strong> These are the recipes for specific build engines, like <a href="#"><code>projext-plugin-webpack-aurelia</code></a> for Aurelia with webpack.</p>
+                  </li>
+                  <li>
+                    <i>4</i>
+                    <p><strong>Plugins:</strong> Extra functionality, like <a href="#"><code>projex-plugin-runner</code></a> to run Node projects on production.</p>
+                  </li>
+                </ul>
+              </article>
+              <article class="article">
+                <h2 class="article_title">
+                  Build <strong>engines & frameworks</strong>
+                </h2>
+                <p>
+                  These are the ones currently supported (and one currently being worked on) and the link to their packages.
+                </p>
+
+                <div class="engines-container">
+                  <ul class="engines">
+                    <li>
+                      <img
+                        src="<%= require('assets/images/icons/webpack.png') %>"
+                        alt="webpack logo"
+                        class="engines_icon -webpack"
+                      />
+                      <p>
+                        <strong><a href="#">webpack</a></strong>
+                      </p>
+                    </li>
+                    <li>
+                      <img
+                        src="<%= require('assets/images/icons/rollup.png') %>"
+                        alt="Rollup logo"
+                        class="engines_icon -rollup"
+                      />
+                      <p>
+                        <strong><a href="#">Rollup</a></strong>
+                      </p>
+                    </li>
+                    <li>
+                      <img
+                        src="<%= require('assets/images/icons/react.png') %>"
+                        alt="React logo"
+                        class="engines_icon -react"
+                      />
+                      <p>
+                        <strong><a href="#">React</a></strong>
+                        <span><a href="#">webpack</a> - <a href="#">Rollup</a></span>
+                      </p>
+                    </li>
+                    <li>
+                      <img
+                        src="<%= require('assets/images/icons/angularjs.png') %>"
+                        alt="AngularJS logo"
+                        class="engines_icon -angularjs"
+                      />
+                      <p>
+                        <strong><a href="#">AngularJS</a></strong>
+                        <span><a href="#">webpack</a> - <a href="#">Rollup</a></span>
+                      </p>
+                    </li>
+                    <li>
+                      <img
+                        src="<%= require('assets/images/icons/aurelia.png') %>"
+                        alt="Aurelia logo"
+                        class="engines_icon -aurelia"
+                      />
+                      <p>
+                        <strong><a href="#">Aurelia</a></strong>
+                        <span><a href="#">webpack</a></span>
+                      </p>
+                    </li>
+                    <li>
+                      <img
+                        src="<%= require('assets/images/icons/vuejs.png') %>"
+                        alt="Vue.js logo"
+                        class="engines_icon -vuejs"
+                      />
+                      <p>
+                        <strong><a href="#">Vue.js</a></strong>
+                        <span class="disabled">Coming soon!</span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+              </article>
+              <article class="article">
+                <h2 class="article_title">
+                  <strong>Features</strong>
+                </h2>
+                <p>
+                  These are some of the main features you can get out of the box.
+                </p>
+
+                <div class="features-container">
+                  <ul class="features">
+                    <li>
+                      <img
+                        src="<%= require('assets/images/icons/babel.png') %>"
+                        alt="Babel logo"
+                        class="features_icon -babel"
+                      />
+                      <p>
+                        <span>
+                          <strong><a href="#">Babel</a></strong> with the env preset
+                        </span>
+                      </p>
+                    </li>
+                    <li>
+                      <img
+                        src="<%= require('assets/images/icons/flow.png') %>"
+                        alt="Flow logo"
+                        class="features_icon -flow"
+                      />
+                      <p>
+                        <span>
+                          <strong><a href="#">Flow</a></strong> support via Babel
+                        </span>
+                      </p>
+                    </li>
+                    <li>
+                      <img
+                        src="<%= require('assets/images/icons/typescript.png') %>"
+                        alt="TypeScript logo"
+                        class="features_icon -typescript"
+                      />
+                      <p>
+                        <span>
+                          <strong><a href="#">TypeScript</a></strong> support via Babel
+                        </span>
+                      </p>
+                    </li>
+                    <li>
+                      <img
+                        src="<%= require('assets/images/icons/node.png') %>"
+                        alt="NodeJS logo"
+                        class="features_icon -node"
+                      />
+                      <p>
+                        <span>
+                          <strong><a href="#">NodeJS</a></strong> targets
+                        </span>
+                      </p>
+                    </li>
+                    <li>
+                      <img
+                        src="<%= require('assets/images/icons/sass.png') %>"
+                        alt="Sass logo"
+                        class="features_icon -sass"
+                      />
+                      <p>
+                        <span>
+                          <strong><a href="#">SCSS</a></strong> support
+                        </span>
+                      </p>
+                    </li>
+                    <li>
+                      <img
+                        src="<%= require('assets/images/icons/nodemon.png') %>"
+                        alt="Nodemon logo"
+                        class="features_icon -nodemon"
+                      />
+                      <p>
+                        <span>
+                          <strong><a href="#">Nodemon</a></strong> integration
+                        </span>
+                      </p>
+                    </li>
+
+                  </ul>
+                </div>
+              </article>
+              <article class="article">
+                <h2 class="article_title">
+                  <strong>Docs</strong> & <strong>Samples</strong>
+                </h2>
+
+                <ul class="externals">
+                  <li>
+                    <p>
+                      This is the documentation generated from the code, there’s no better place to understand the magic
+                    </p>
+                    <div>
+                      <a href="#">Go to the <strong>Docs</strong></a>
+                    </div>
+                  </li>
+                  <li>
+                    <p>
+                      There’s a sample project or target for almost every feature, what are you waiting for?
+                    </p>
+                    <div>
+                      <a href="#">Go to the <strong>Samples</strong> repo</a>
+                    </div>
+                  </li>
+
+                </ul>
+              </article>
+            </div>
+            <footer class="footer">
+              <div>
+                <a href="#" class="homer0">
+                  <img
+                    src="<%= require('assets/images/homer0.svg') %>"
+                    alt="homer0 logo"
+                  />
+                </a>
+              </div>
+              <div>
+                <ul class="shields">
+                  <li>
+                    <a href="https://travis-ci.org/homer0/projext">
+                      <img src="https://img.shields.io/travis/homer0/projext.svg?style=flat-square" alt="Travis shield" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://coveralls.io/github/homer0/projext?branch=master">
+                      <img src="https://img.shields.io/coveralls/github/homer0/projext.svg?style=flat-square" alt="Coveralls shield" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://david-dm.org/homer0/projext">
+                      <img src="https://img.shields.io/david/homer0/projext.svg?style=flat-square" alt="David shield" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
