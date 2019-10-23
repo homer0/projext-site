@@ -6,4 +6,13 @@ module.exports = {
       },
     },
   },
+  copy: {
+    enabled: true,
+    items: [
+      'robots.txt',
+    ],
+    copyOnBuild: {
+      targets: ['app'],
+    },
+  },
 };

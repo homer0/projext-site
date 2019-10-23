@@ -5,10 +5,74 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>projext | Bundling made simple</title>
+    <meta name="description" content="Simplify the way you use webpack and/or Rollup" />
+    <meta property="og:title" content="projext | Bundling made simple" />
+    <meta property="og:description" content="Simplify the way you use webpack and/or Rollup" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@homer0" />
+    <meta name="twitter:title" content="projext | Bundling made simple" />
+    <meta name="twitter:description" content="Simplify the way you use webpack and/or Rollup" />
+    <meta name="keywords" content="javascript, webpack, rollup, react, aurelia, angularjs" />
+    <meta name="theme-color" content="#1D1F24" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="<%= require('assets/images/icons/projext-48.png') %>" />
+    <link
+      rel="apple-touch-icon"
+      sizes="48x48"
+      href="<%= require('assets/images/icons/projext-48.png') %>"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="<%= require('assets/images/icons/projext-72.png') %>"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="96x96"
+      href="<%= require('assets/images/icons/projext-96.png') %>"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="<%= require('assets/images/icons/projext-144.png') %>"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="<%= require('assets/images/icons/projext-192.png') %>"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="256x256"
+      href="<%= require('assets/images/icons/projext-256.png') %>"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="384x384"
+      href="<%= require('assets/images/icons/projext-384.png') %>"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="512x512"
+      href="<%= require('assets/images/icons/projext-512.png') %>"
+    />
   </head>
   <body>
     <main class="main">
       <header class="header">
+        <div class="header-mobile">
+          <div class="logo-mobile">projext | Bundling made simple</div>
+          <button
+            type="button"
+            class="burger"
+            aria-label="Open the menu"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
         <div class="container">
           <nav class="nav">
             <ul class="nav-links">
@@ -24,7 +88,7 @@
                   href="#engines-and-frameworks"
                   class="nav-link"
                   title="Engines & Frameworks"
-                >Engines & Frameworks</a>
+                >Engines<span> & Frameworks</span></a>
               </li>
               <li>
                 <a
@@ -73,6 +137,7 @@
                   <button
                     type="button"
                     class="install-box-toggle"
+                    title="Switch client"
                   >
                     <img
                       src="<%= require('assets/images/icons/yarn.svg') %>"
@@ -89,13 +154,20 @@
                     type="button"
                     class="install-box-copy"
                   >
-                    <code class="install-box-code">
+                    <code class="install-box-code -npm">
                       > npm init projext
+                    </code>
+                    <code class="install-box-code -yarn">
+                      > yarn create projext
+                    </code>
+                    <code class="install-box-code -copied">
+                      > copied!
                     </code>
                   </button>
                 </div>
               </div>
 
+              <a class="anchor" href="#wtf" id="wtf" name="wtf"></a>
               <article class="article">
                 <h2 class="article-title">
                   <strong>WTF</strong> is this?
@@ -144,6 +216,7 @@
                   </li>
                 </ul>
               </article>
+              <a class="anchor" href="#engines-and-frameworks" id="engines-and-frameworks" name="engines-and-frameworks"></a>
               <article class="article">
                 <h2 class="article-title">
                   Build <strong>engines & frameworks</strong>
@@ -229,6 +302,7 @@
                 </div>
 
               </article>
+              <a class="anchor" href="#features" id="features" name="features"></a>
               <article class="article">
                 <h2 class="article-title">
                   <strong>Features</strong>
