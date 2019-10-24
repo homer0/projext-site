@@ -3,6 +3,7 @@
  * type: browser
  */
 
+import copyToClipboard from 'clipboard-copy';
 import 'normalize.css';
 import './assets/scss/styles.scss';
 
@@ -83,7 +84,7 @@ document.querySelector(installBox.selectors.copy)
     hide(activeCode);
     show(installBox.codes.copied);
     const text = activeCode.innerText.replace(/[^\w\s]/g, '').trim();
-    navigator.clipboard.writeText(text);
+    copyToClipboard(text);
     setTimeout(() => {
       installBox.enabled = true;
       hide(installBox.codes.copied);

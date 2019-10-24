@@ -9,6 +9,7 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
+    "clipboard-copy": "^3.1.0",
     "normalize.css": "^8.0.1",
     "projext": "^7.1.1",
     "projext-plugin-webpack": "^9.2.0",
